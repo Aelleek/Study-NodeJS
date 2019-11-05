@@ -1,0 +1,43 @@
+● 전역 객체 (Global Object)
+	- 전역 객체는 함수 안과 밖에서 모두 사용할 수 있도록 범위를 제한하지 않는 객체이다. 즉, 코드의 어느 부분에서나 사용할 수 있다.
+
+
+○ console : 콘솔 창에 결과를 보여주는 객체.
+
+  - console.log() : 콘솔 창에 문자열을 출력하는 메소드.
+  - console.dir(object) : 자바스크립트 객체의 속성들을 출력하는 메소드.
+  - console.time() : 실행 시간을 측정하기 위한 시작 시간을 기록하는 메소드.
+  - console.timeEnd() : 실행 시간을 측정하기 위한 끝 시간을 기록하는 메소드.
+
+
+
+○ process : 프로세스의 실행에 대한 정보를 다루는 객체.
+
+  - process.env				: 컴퓨터 환경과 관련된 정보를 가진 객체
+  - process.version 		: node.js의 버전 	
+  - process.versions		: node.js와 연관된 프로그램들의 버전을 가진 객체
+  - process.arch			: 프로세서의 아키텍처 (arm/ia32/x64)
+  - process.platform		: 플랫폼
+  - process.memoryUsage()	: 메모리 사용 정보를 가진 객체
+  - process.uptime()		: 현재 프로그램이 실행된 시간
+
+  - process.argv 			: 프로그램의 매개변수의 정보를 갖는 속성
+  	// node라는 명령어와 프로그램의 경로 정보를 포함하므로 추가된 매개변수의 정보는 2부터 시작해서 출력된다.
+
+  - process.exit()			: 프로그램을 종료시키는 명령어
+    // 0 : 정상종료 ,  1 : 비정상 종료
+
+
+
+○ exports : 모듈을 다루는 객체.
+
+
+
+
+
+○ undefined : 코드를 실행했을 때, 호출한 함수에서 반환하는 값이 없을경우 undefined가 출력된다.
+			  자바스크립트의 함수는 항상 값을 반환하도록 되어 있는데, 함수를 만들 때 값을 반환하는 코드를 넣지 않으면 undefined가 반환된다.
+
+○ undefined와 null의 차이 : undefined는 단순히 값이 존재하지 않는 것이고, null은 개발자가 의도적으로 값을 비운 것이다.
+
+
