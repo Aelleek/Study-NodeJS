@@ -17,14 +17,25 @@ console.log(process.uptime());      // 현재 프로그램이 실행된 시간
 
 console.log('- 매개변수 정보 관련');
 
+console.log('argv 속성의 파라미터 수 : ', + process.argv.length);
+
+console.dir(process.argv);
+
 process.argv.forEach(function(val, index, array) {
     console.log(index + ': ' + val);
 });
 
-/* node processExample.js 1 2 3 
-   결과값
+/* node processExample.js 1 2 3 의 결과값
 
-   - 매개변수 정보 관련
+- 매개변수 정보 관련
+argv 속성의 파라미터 수 :  5
+[
+  '/usr/local/Cellar/node/12.12.0/bin/node',
+  '/Users/ael/Documents/Programming/1. Study/3. NodeJS/Node.js Programming/Ch02/Global Object/processExample.js',
+  '1',
+  '2',
+  '3'
+]
 0: /usr/local/Cellar/node/12.12.0/bin/node
 1: /Users/ael/Documents/Programming/1. Study/3. NodeJS/Node.js Programming/Ch02/Global Object/processExample.js
 2: 1
