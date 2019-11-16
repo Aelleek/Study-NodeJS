@@ -1,0 +1,19 @@
+● 스트림 단위로 파일 읽고 쓰기.
+  - 파일을 I/O할 때, 데이터 단위가 아닌 스트림 단위로 처리할 수도 있다.
+    스트림은 데이터가 전달되는 통로와 같은 개념이다. 파일을 읽을 때는 createReadStream() 메소드, 
+    파일에 쓸 때는 createWriteStream() 메소드로 객체를 만든 후 데이터를 읽고 쓴다.
+
+
+  - createReadStream(path, [options])	: 파일을 읽기 위한 스트림 객체를 만든다.
+  - createWriteStream(path, [options])	: 파일을 쓰기 위한 스트림 객체를 만든다.
+
+  [options]
+  - flags
+  - encoding
+  - autoClose
+  옵션에는 위와 같은 속성이 들어 있는 자바스크립트 객체를 전달할 수 있다.
+
+
+  - fileStreamIOExApp.js 에서 살펴본 기능은 두 개의 스트림을 붙여 주면 더 간단하게 만들 수 있다.
+  pipe() 메소드는 두 개의 스트림을 붙여 주는 역할을 한다.
+  ReadStream 타입의 객체와 WriteStream 타입의 객체를 붙여주면 스트림 간에 데이터를 알아서 전달한다.
